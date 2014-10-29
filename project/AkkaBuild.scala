@@ -1149,7 +1149,7 @@ object AkkaBuild extends Build {
     def defaultImports = Seq("!sun.misc", akkaImport(), configImport(), scalaImport(), "*")
     def akkaImport(packageName: String = "akka.*") = versionedImport(packageName, "2.3", "2.4")
     def configImport(packageName: String = "com.typesafe.config.*") = versionedImport(packageName, "1.2.0", "1.3.0")
-    def protobufImport(packageName: String = "com.google.protobuf.*") = versionedImport(packageName, "2.5.0", "2.6.0")
+    def protobufImport(packageName: String = "com.google.protobuf.*") = versionedImport(packageName, "2.4.1", "2.5.0")
     def scalaImport(packageName: String = "scala.*") = versionedImport(packageName, s"$scalaEpoch.$scalaMajor", s"$scalaEpoch.${scalaMajor+1}")
     def optionalResolution(packageName: String) = "%s;resolution:=optional".format(packageName)
     def versionedImport(packageName: String, lower: String, upper: String) = s"""$packageName;version="[$lower,$upper)""""
@@ -1183,7 +1183,7 @@ object Dependencies {
     // mirrored in OSGi sample
     val netty         = "io.netty"                    % "netty"                        % "3.8.0.Final" // ApacheV2
     // mirrored in OSGi sample
-    val protobuf      = "com.google.protobuf"         % "protobuf-java"                % "2.5.0"       // New BSD
+    val protobuf      = "com.google.protobuf"         % "protobuf-java"                % "2.4.1"       // New BSD
     val scalaStm      = "org.scala-stm"              %% "scala-stm"                    % scalaStmVersion // Modified BSD (Scala)
 
     val slf4jApi      = "org.slf4j"                   % "slf4j-api"                    % "1.7.5"       // MIT
