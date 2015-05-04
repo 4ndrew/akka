@@ -21,7 +21,7 @@ object Protobuf {
     paths <<= (sourceDirectory in Compile, sourceDirectory in Test) { (a, b) => Seq(a, b) map (_ / "protobuf") },
     outputPaths <<= (sourceDirectory in Compile, sourceDirectory in Test) { (a, b) => Seq(a, b) map (_ / "java") },
     protoc := "protoc",
-    protocVersion := "2.5.0",
+    protocVersion := "2.4.1",
     generate <<= generateSourceTask
   )
 
